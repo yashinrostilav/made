@@ -1,0 +1,16 @@
+<!doctype html>
+<body>
+
+<title>News demo</title>
+
+<form action="{{ url_for('index_page') }}" method=post>
+	<dl>
+		<dt>Enter news text: <br>
+		<dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
+		<dd><input type=submit value="Predict group">
+	</dl>
+</form>
+
+<br>Predicted:<br>
+{{ prediction_message }}
+</body>
